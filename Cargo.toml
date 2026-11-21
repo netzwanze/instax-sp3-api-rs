@@ -1,0 +1,12 @@
+[package]
+name = "instax-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Print to Fujifilm Instax SP-2 / SP-3 printers over Wi-Fi (Rust port of jpwsutton/instax_api)"
+license = "MIT"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+# >= 0.25.5 for ImageDecoder::orientation / DynamicImage::apply_orientation
+image = { version = "0.25.5", default-features = false, features = ["jpeg", "png", "webp"] }
